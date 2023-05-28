@@ -1,0 +1,14 @@
+.add-members-heading{
+  font-size: 2rem;
+  border-top: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+.add-members-input-section{
+  display: flex;
+  justify-content: flex-start;
+
+  > *{
+    margin-right: 10px;
+  }
+}
