@@ -78,6 +78,7 @@ const AddItemsSublocation = () => {
             return (
               <Tag
                 tagName={item.itemName}
+                tagValue={`₹${item.totalItemPriceOnBill}`}
                 key={idx}
                 onCloseAction={removeItemFromStore}
               />
