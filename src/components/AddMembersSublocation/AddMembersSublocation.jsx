@@ -67,7 +67,13 @@ const AddMembersSublocation = () => {
 
         <div className='member-list-tag-list'>
           {members.map((item, idx) => {
-            return <Tag tagName={item} onCloseAction={removeMemberFromStore} />;
+            return (
+              <Tag
+                tagName={item}
+                key={idx}
+                onCloseAction={removeMemberFromStore}
+              />
+            );
           })}
         </div>
       </div>
