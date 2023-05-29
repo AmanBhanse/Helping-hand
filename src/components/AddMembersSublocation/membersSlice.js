@@ -9,9 +9,12 @@ export const membersContainerSlice = createSlice({
     addMember: (state, action) => {
       state.members.push(action.payload);
     },
+    removeMember: (state, action) => {
+      state.members = state.members.filter((item) => item !== action.payload);
+    },
   },
 });
 
-export const { addMember } = membersContainerSlice.actions;
+export const { addMember, removeMember } = membersContainerSlice.actions;
 
 export default membersContainerSlice.reducer;

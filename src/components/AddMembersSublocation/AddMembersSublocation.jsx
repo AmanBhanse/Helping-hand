@@ -1,14 +1,23 @@
 import React, { useState } from "react";
 import "./AddMembersSublocation.scss";
 import { useSelector, useDispatch } from "react-redux";
-import { addMember } from "./membersSlice";
+import { addMember, removeMember } from "./membersSlice";
+import { AiOutlineUserAdd } from "react-icons/ai";
+import Tag from "../Tag/Tag";
 
 const AddMembersSublocation = () => {
   const members = useSelector((state) => state.membersContainer.members);
   const dispatch = useDispatch();
   const [inputMember, setInputMember] = useState("");
+
   const addMemberToStore = (memberName) => {
     dispatch(addMember(memberName));
+  };
+
+  const removeMemberFromStore = (memberName) => {
+    memberName = memberName.toLowerCase();
+    dispatch(removeMember(memberName));
+    console.log(members);
   };
 
   /**
@@ -30,7 +39,7 @@ const AddMembersSublocation = () => {
 
   return (
     <div className="add-members-sublocation-parent">
-      <div className="add-members-heading">Members</div>
+      <div className="add-members-heading">Add Members</div>
 
       <div className="add-members-input-section">
         <input
@@ -41,14 +50,23 @@ const AddMembersSublocation = () => {
         />
 
         <button
+          className="add-members-add-button"
           type="button"
           onClick={() => {
             processInputForMember(inputMember);
           }}
         >
-          Add me
+          <AiOutlineUserAdd className="add-members-add-button-icon" />
         </button>
       </div>
+
+      <div className="add-members-display-list">
+        <div className="member-list-heading">Member list : </div>
+      </div>
+
+      {members.map((item, idx) => {
+        return <Tag tagName={item} onCloseAction={removeMemberFromStore} />;
+      })}
     </div>
   );
 };

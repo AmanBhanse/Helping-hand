@@ -1,14 +1,62 @@
+:root{
+  --main-heading-size : 2rem;
+  --sub-heading-size : 1.5rem;
+}
+
 .add-members-heading{
-  font-size: 2rem;
+  font-size: var(--main-heading-size);
   border-top: 1px solid #ccc;
   margin-bottom: 1rem;
 }
 
 .add-members-input-section{
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start; 
 
   > *{
     margin-right: 10px;
+  }
+
+  input{
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    padding: 4px;
+  }
+}
+
+.add-members-add-button-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f5f5f5;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  overflow: hidden;
+  color: #333;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.add-members-add-button{
+  height: 30px;
+  width: 30px;
+}
+
+
+.add-members-display-list{
+  margin-left: 10px;
+  margin-top: 10px;
+  
+  .member-list-heading{
+    font-size: var(--sub-heading-size);
+    margin-bottom: 10px;
   }
 }
