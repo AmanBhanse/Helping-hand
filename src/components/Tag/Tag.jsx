@@ -1,6 +1,6 @@
-import React from "react";
-import { AiOutlineClose } from "react-icons/ai";
-import "./Tag.scss";
+import React from 'react';
+import { AiOutlineClose } from 'react-icons/ai';
+import './Tag.scss';
 
 const Tag = ({ tagName, onCloseAction }) => {
   if (onCloseAction === undefined) {
@@ -8,11 +8,15 @@ const Tag = ({ tagName, onCloseAction }) => {
   }
 
   return (
-    <div className="tag-container">
-      <div className="tag-title">
-        <span className="tag-name"> {tagName}</span>
+    <div className='tag-container'>
+      <div className='tag-title'>
+        <span className='tag-name'> {tagName}</span>
       </div>
-      <div className="tag-close-button">
+      <div
+        className='tag-close-button'
+        onClick={() => {
+          onCloseAction(tagName);
+        }}>
         <AiOutlineClose />
       </div>
     </div>

@@ -1,23 +1,23 @@
-:root{
-  --main-heading-size : 2rem;
-  --sub-heading-size : 1.5rem;
+:root {
+  --main-heading-size: 2rem;
+  --sub-heading-size: 1.5rem;
 }
 
-.add-members-heading{
+.add-members-heading {
   font-size: var(--main-heading-size);
   border-top: 1px solid #ccc;
   margin-bottom: 1rem;
 }
 
-.add-members-input-section{
+.add-members-input-section {
   display: flex;
-  justify-content: flex-start; 
+  justify-content: flex-start;
 
-  > *{
+  >* {
     margin-right: 10px;
   }
 
-  input{
+  input {
     border-style: solid;
     border-color: white;
     border-radius: 5px;
@@ -27,7 +27,7 @@
   }
 }
 
-.add-members-add-button-icon{
+.add-members-add-button-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,18 +45,29 @@
   cursor: pointer;
 }
 
-.add-members-add-button{
+.add-members-add-button {
   height: 30px;
   width: 30px;
 }
 
 
-.add-members-display-list{
+.add-members-display-list {
   margin-left: 10px;
   margin-top: 10px;
-  
-  .member-list-heading{
+
+  .member-list-heading {
     font-size: var(--sub-heading-size);
     margin-bottom: 10px;
+  }
+
+  .member-list-tag-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    >* {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
   }
 }
