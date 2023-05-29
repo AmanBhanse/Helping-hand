@@ -47,6 +47,7 @@ const AddMembersSublocation = () => {
       <div className='add-members-input-section'>
         <input
           type='text'
+          placeholder='Member Name'
           onChange={(e) => {
             setInputMember(e.target.value);
           }}
