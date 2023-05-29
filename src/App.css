@@ -1,3 +1,9 @@
+:root {
+  --main-heading-size: 2rem;
+  --sub-heading-size: 1.5rem;
+  --section-margin-bottom : 1.5rem;
+}
+
 body {
   background-color: #6a1b9a;
   color: white;

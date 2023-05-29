@@ -41,7 +41,7 @@ const AddMembersSublocation = () => {
   };
 
   return (
-    <div className='add-members-sublocation-parent'>
+    <div className='add-members-sublocation-container'>
       <div className='add-members-heading'>Add Members</div>
 
       <div className='add-members-input-section'>
